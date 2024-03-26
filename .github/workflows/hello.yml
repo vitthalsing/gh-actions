@@ -1,14 +1,20 @@
 name: hello
-
+# name of the workflow
+# it is not mandatory, if left blank gh will name it randomly
 on: [push]
-
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
 jobs:
+# multiple jobs can be part of workflow
   build:
-
+  # job name
     runs-on: ubuntu-latest
+    # OS on which this workflow will run
 
     steps:
+    # steps to run your process, each step has access to file system in Virtual env
     - uses: actions/checkout@v1
+    # Actions are bundles of code used to perform a specific task or operation, and essentially, actions are docker images.
+    # Actions can be located in the same repository as the workflow in another GitHub users public repository or even in a container registry like Docker Hub
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
