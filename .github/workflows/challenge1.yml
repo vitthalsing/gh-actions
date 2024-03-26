@@ -1,0 +1,41 @@
+name: challenge1
+
+on: push
+
+jobs:
+    job1:
+        name: ubuntu
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+              run: date
+
+    job2:
+        name: windows
+        runs-on: windows-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+              run: "date"
+    
+    job3:
+        name: mac
+        runs-on: macos-latest
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+              run: date
+        
+    job4:
+        name: windows2019
+        needs: [job1,job2,job3]
+        runs-on: windows-2019
+        steps:
+            - name: Step one
+              uses: actions/checkout@v2
+            - name: Step two
+              run: "date"

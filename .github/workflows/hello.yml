@@ -9,8 +9,8 @@ jobs:
   # job name
     runs-on: ubuntu-latest
     # OS on which this workflow will run
-    # https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/using-self-hosted-runners-in-a-workflow
-
+    # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+    
     steps:
     # steps to run your process, each step has access to file system in Virtual env
     - uses: actions/checkout@v1
