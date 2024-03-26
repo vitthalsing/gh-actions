@@ -1,0 +1,9 @@
+name: lint
+on: push
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check out the code
+            uses: actions/checkout@v2
+            
