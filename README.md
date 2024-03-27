@@ -20,3 +20,4 @@
 
     steps:
     	-uses: "docker://python:3.9"
+testing auto mere
