@@ -14,7 +14,7 @@ jobs:
           run: |
             pip install -r requirements.txt
             flake8 --ignore=E501,E231 *.py tests/*.py
-            pylint --errors-only --disable=C0301 --diable=C0326 *.py tests/*.py
+            pylint --errors-only --disable=C0301 --disable=E0015 *.py tests/*.py
         - name: unit test
           run: python -m unittest --verbose --failfast
     merge:
